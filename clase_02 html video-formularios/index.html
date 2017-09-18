@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <table width="300px" border="1px">
+        <!--ancho de la tabla -->
+        <caption> Nuestros Cursos </caption>
+        <thead>
+            <!-- tr filas y th columnas, td datos-->
+            <tr>
+                <!-- dos columnas con titulos th-->
+                <th>tema</th>
+                <th>precio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- filas de datos td-->
+            <tr>
+                <td rowspan="4">html</td>
+                <!-- rowspan unifica 4 filas-->
+                <td>$999</td>
+            </tr>
+            <tr>
+                <td>$999</td>
+            </tr>
+            <tr>
+                <td>$999</td>
+            </tr>
+            <tr>
+                <td>$999</td>
+            </tr>
+            <tr>
+                <td>css</td>
+                <td>$99</td>
+            </tr>
+            <tr>
+                <td>javascript</td>
+                <td>$998</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">Estan Buenisimos!</td>
+                <!-- colspan ocupa dos columnas-->
+            </tr>
+        </tfoot>
+    </table>
+    <br>
+    <h2>archivo de video</h2>
+    <!-- play con controless-->
+    <video src="video/codigo.ogv" controls height="300px">su navegador no admite video</video>
+    <h2>varios archivos de video</h2>
+    <!-- para que sea compatible con los tres navegadores mas conocidos, uso la etiqueta source-->
+    <!-- autoplay loop infinito-->
+    <video width="300px" controls autoplay loop poster="">
+        <source src="video/codigo.ogv" type="video/ogv">
+        <source src="video/codigo.mp4" type="video/mp4">
+        <source src="codigo.webm" type="video/webm"> su navegador no este formato de video
+    </video>
+
+</body>
+
+</html>

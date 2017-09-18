@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--  -->
+    <form id="miFrom" action="" method="">
+
+        <!-- descripcion del imput, mediante el for lo relaciono  -->
+        <label for="nombre">Ingrese Nombre: </label>
+        <input type="text" name="nombre" id="nombre" placeholder="ingrese nombre" />
+
+        <fieldset>
+            <!-- fieldset agrupa campos  -->
+            <legend>direccion</legend>
+
+            <label for="calle">Calle: </label>
+            <input type="text" name="calle" id="calle" placeholder="ingrese calle" /><br><br>
+
+            <label for="Calle">altura: </label>
+            <input type="text" name="altura" id="nombre" placeholder="ingrese altura" /><br><br>
+
+            <label for="nombre">cp: </label>
+            <input type="text" name="cp    " id="cp" placeholder="ingrese nombre" /><br><br>
+
+            <label for="genero">genero: </label>
+            <input type="radio" name="genero" id="genero" value="1" />masculino
+            <input type="radio" name="genero" value="0" />femenino
+        </fieldset>
+
+        <br><br>
+
+        <select>
+            <option value="value1">opcion 01</option>
+            <option value="value2">opcion 02</option>
+            <option value="value3">opcion 03</option>
+        </select>
+
+        <br><br>
+
+        <optgroup label="LG">
+            <option>23 WIDE</option>
+            <option>18 HDMI</option>
+            <option>14 FULLHD</option>
+        </optgroup>
+
+        <br><br>
+
+        <input list="marcas" />
+        <datalist id="marcas">
+            <option value="renault">
+                <option value="ford">
+        </datalist>
+
+        <br><br>
+
+        <br><input type="checkbox" name="intereses" value="informatica">Informatica<br>
+        <br><input type="checkbox" name="intereses" value="juegos">Juegos<br>
+        <br><input type="checkbox" name="intereses" value="musica">Musica<br>
+
+        <br><br>
+
+        <button type="button"> <!-- "submit" "reset" de acuerso al form id --> 
+            submit
+        </button>
+
+        <br><br>
+
+        <h2>color</h2>
+        <input type="color"><br>
+        <h2>date</h2>
+        <input type="date"><br>
+        <h2>email</h2>
+        <input type="email"><br>
+        <h2>url</h2>
+        <input type="url"><br>
+        <h2>number</h2>
+        <input type="number" min="0" max="10" step="a"><br>
+        <h2>password</h2>
+        <input type="password"><br>
+
+
+
+
+    </form>
+</body>
+
+</html>

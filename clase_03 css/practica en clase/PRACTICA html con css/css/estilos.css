@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+}
+
+h1,h2,h3  {
+    background-color:#910D0D;
+    width: 600px;
+    height: 100px;
+    padding: 10px; /* en img's o texto, cont con respecto al borde */
+    margin: 2px; /* del borde haciia afuera */
+}
+
+#div1{
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+    background-color: #530B0B;
+    float : relative ;
+}
+
+
+#div2{
+    width: 300px;
+    height: 300px;
+    border: 10px dotted black;
+    background-color: #530B0B;
+    float: right;
+}
+
+p { 
+    background-color: black;
+    color: white;
+    width: 200px;
+    margin: 2px;
+    padding: 4px;
+}
+
+span { background-color: #910D0D;}
+
+
+/*
+algunos estilos :          
+border 10px(der-izq) 5px (arr-abj)
+border 5px 5px 5px 5px  der-izq-arr-abj
+border : 0 0 10px 0 subraya solo abajo
+*/
+
+/*
+estos estilos chorean o agregan tamaño
+para que no pase : box-sizing: border-box;
+*/

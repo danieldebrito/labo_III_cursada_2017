@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>CSS Website Layout</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+  <!-- /////////////////////////////////////////// HEADER ///////////////////////////////////////// -->
+  <div class="row">
+    <div class="column left"></div>
+    <div class="column middle">
+      <div class="header">
+        <img src="img/logo.png" alt="logo" style="width:400px;">
+      </div>
+    </div>
+    <div class="column right"></div>
+  </div>
+  <!-- /////////////////////////////////////////// NAV ///////////////////////////////////////// -->
+  <div class="nav">
+    <div class="row">
+      <div class="column left"></div>
+      <div class="column middle">
+        <div class="dropdown">
+          <button class="dropbtn" href="#home">Inicio</button>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Nosotros</button>
+          <div class="dropdown-content">
+            <a href="#mision">Mision</a>
+            <a href="#vision">Vision</a>
+            <a href="#valores">Valores</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Blog</button>
+          <div class="dropdown-content">
+            <a href="#">Consejos</a>
+            <a href="#">Ciudades</a>
+            <a href="#">Pasajes</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Tienda</button>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Contacto</button>
+        </div>
+      </div>
+      <div class="column right"></div>
+    </div>
+  </div>
+  <!-- /////////////////////////////////////////// COLUMNS ///////////////////////////////////////// -->
+  <div class="row">
+    <div class="column left"></div>
+    <div class="column middle">
+      <header class="headerArticle">
+        <h1>Viajar a Londres</h1>
+      </header>
+      <article>
+        <img src="img/imagen_1.jpg" alt="imagen londres" class="imgArt">
+        <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area
+          of over 13 million inhabitants.</p>
+        <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its
+          founding by the Romans, who named it Londinium.</p>
+      </article>
+      <header class="headerArticle">
+        <h1>Puente de la torre</h1>
+      </header>
+      <article>
+        <img src="img/imagen_2.jpg" alt="imagen londres" class="imgArt">
+        <p>El puente de la Torre, en inglés Tower Bridge, es un puente que cruza el río Támesis en Londres. Combina las características
+          de puente basculante y puente colgante. Está construido en estilo victoriano neogótico y se encuentra situado cerca
+          de la torre de Londres, que le da su nombre. El puente, uno de los cuatro puentes pertenecientes a la Corporation
+          of London, el ayuntamiento de la City de Londres, es mantenido por Bridge House Estates, una compañía sin ánimo
+          de lucro.2​ Los otros tres son el puente de Londres, el puente de Blackfriars y el puente de Southwark.​</p>
+      </article>
+      <header class="headerArticle">
+        <h1>Metro de Londres</h1>
+      </header>
+      <article>
+        <img src="img/imagen_3.jpg" alt="imagen londres" class="imgArt">
+        <p>El metro de Londres (en inglés: London Underground)? es una red de transporte público ferroviaria eléctrica (un metro
+          o sistema subterráneo) que funciona tanto por encima como por debajo de tierra en toda el área del Gran Londres.
+          Es el sistema de transporte de este tipo más antiguo del mundo. Entró en funcionamiento el 10 de enero de 1863
+          y sus secciones más antiguas completaron 150 años de haber entrado en operación en 2013.1​ Los londinenses suelen
+          referirse a él como the Underground o de una manera más familiar como the Tube, debido a la forma de sus túneles.
+          Hoy en día existen 274 estaciones abiertas y más de 408 kilómetros de líneas activas, con más de tres millones
+          de pasajeros que usan el metro cada día (948 millones de transportes realizados en el periodo 2003-2004). Es la
+          segunda red de metro del mundo (después de Shanghái)por kilómetros y la primera de la Unión Europea. Desde 2003,
+          el metro forma parte de la organización Transport for London (TfL), que también administra los autobuses de Londres,
+          incluyendo los famosos autobuses rojos de dos pisos. Anteriormente London Regional Transport era la compañía propietaria
+          del Metro de Londres.</p>
+      </article>
+    </div>
+    <div class="column right">
+      <h2>Otros Post</h2>
+      <ul class="ulAside">
+        <li><a href="#home1">Entrada 1</a></li>
+        <li><a href="#home2">Entrada 2</a></li>
+        <li><a href="#home3">Entrada 3</a></li>
+        <li><a href="#home4">Entrada 4</a></li>
+        <li><a href="#home5">Entrada 5</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- /////////////////////////////////////////// FOOTER ///////////////////////////////////////// -->
+  <div class="row" style="background-color: #db008d">
+    <div class="column middle">
+      <h2>Sobre Nosotros</h2>
+      <p style="color:white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, libero minima, ratione autem, perspiciatis doloremque
+        mollitia eaque soluta nam repudiandae quibusdam consequatur exercitationem praesentium obcaecati sunt quia placeat
+        quas error.</p>
+    </div>
+    <div class="column middle">
+      <div class="dropdown">
+        <button class="dropbtn">Inicio</button>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Inicio</button>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Inicio</button>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Inicio</button>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Inicio</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p style="color:white">Todos los derechos reservados &copy; Blog de Viajes 2017 </p>
+  </div>
+
+
+</body>
+
+</html>
