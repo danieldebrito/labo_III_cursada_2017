@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Primer Parcial Laboratorio III</title>
+    <style>
+        form{
+            width: 300px;
+            background-color: lightblue;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            margin-bottom: 20px;
+        }
+        button{
+            margin-top: 5px;
+            background-color: green; 
+        }
+        th{
+            background-color: lightseagreen;
+            width: 300px;
+            text-align: left;
+        }
+        td{
+            background-color: lightgray;
+            width: 300px;
+            text-align: left;
+        }
+    </style>
+</head>
+<script>
+    var btn_agregar;
+    var tabla;
+    var xhr;
+    var indice;
+    var personas;
+
+    window.onload = function(){
+        btn_agregar = document.getElementById("agregar");
+        tabla = document.getElementById("tabla");
+        btn_agregar.addEventListener("click", agregar);
+        refrescarLista();
+    };
+    
+    
+    //REFRESCO LA LISTA
+    function refrescarLista(){
+        xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = construirTabla;
+        xhr.open('GET', 'http://localhost:3000/traerpersonas', true);
+        xhr.send();
+    }
+    function construirTabla(){
+        if(xhr.readyState == 4){
+            if(xhr.status == 200){
+                personas = JSON.parse(xhr.responseText);
+                tabla.innerHTML ="";
+                for (var i = 0; i < personas.length; i++) {
+                    tabla.innerHTML +="<tr><td>"+personas[i].nombre+"</td><td>"+personas[i].apellido+"</td><td><button onclick='eliminarPersona(" + i + ")' >Borrar</button><button onclick='modificarPersona(" + i + ")' >Modificar</button></td></tr>";
+                }
+            }
+        }
+    }
+
+    //AGREGAR PERSONAS
+    function agregar(){
+        nombre= document.getElementById("nombre").value;
+        apellido= document.getElementById("apellido").value;
+        var data = 'nombre=' + encodeURIComponent(nombre) + '&apellido=' +encodeURIComponent(apellido);
+        xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = respuesta;
+        xhr.open('POST', 'http://localhost:3000/agregarpersona', true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.send(data);
+        btn_agregar.addEventListener("click", agregar);
+    }
+    function respuesta(){
+        if(xhr.readyState == 4){
+            if(xhr.status == 200){
+                refrescarLista();
+            }
+        }
+    }
+
+    //BORRAR PERSONA
+    function eliminarPersona(i){
+        var data = 'indice=' + encodeURIComponent(i);
+        xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = respuesta;
+        xhr.open('POST', 'http://localhost:3000/eliminarpersona', true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.send(data);
+    }
+
+    //MODIFICAR PERSONA
+    function modificarPersona(i){
+        var persona = personas[i];
+        indice = i;
+        document.getElementById("nombre").value = persona.nombre;
+        document.getElementById("apellido").value = persona.apellido;
+        btn_agregar.removeEventListener("click",agregar);
+        btn_agregar.addEventListener("click", modificar);
+    }
+    function modificar(){
+        nombre = document.getElementById("nombre").value;
+        apellido = document.getElementById("apellido").value;
+        var persona = {
+            nombre: nombre,
+            apellido: apellido
+        }
+
+        var data = 'indice=' + encodeURIComponent(indice) + '&persona='+ encodeURIComponent(JSON.stringify(persona));
+        xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = respuesta;
+        xhr.open('POST', 'http://localhost:3000/modificarpersona', true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.send(data);
+        btn_agregar.removeEventListener("click",modificar);
+        btn_agregar.addEventListener("click", agregar);
+    }
+</script>
+<body>
+    <div>
+    <label>Nombre: </label>
+    <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+    <label>Apellido: </label>
+    <input type="text" name="apellido" id="apellido" placeholder="Apellido">
+    <button id="agregar">Guardar</button>
+    </div>
+    <table>
+        <thead><th>Nombre</th><th>Apellido</th><th>Acción</th></thead>
+        <tbody id="tabla"></tbody>
+    </table>
+</body>
+</html>
