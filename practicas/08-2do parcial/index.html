@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="js\bower_components\bootstrap\dist\css\bootstrap.min.css">
+    <link rel="stylesheet" href="css\style.css">
+    <script src="js\bower_components\jquery\dist\jquery.min.js"></script>
+    <script src="js\bower_components\bootstrap\dist\js\bootstrap.min.js"></script>
+    <script src="js\class\persona.js"></script>
+    <script src="js\class\empleado.js"></script>
+    <script src="js\class\ePuesto.js"></script>
+    <script src="js\class\app.js"></script>
+    <title>2do parcial</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Logo</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-log-in"></span> Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid text-center " style="margin-top:60px">
+        <div class="row content">
+            <div class="col-sm-2 sidenav" style="text-align: left">
+                <br>
+                <label class="active" for="id">ID: </label>
+                <input class="form-control" type="number" id="id">
+                <br>
+                <label for="nombre">Nombre: </label>
+                <input class="form-control" type="text" id="nombre">
+                <br>
+                <label for="edad">Edad: </label>
+                <input class="form-control" type="number" id="edad">
+                <br>
+                <label for="sexo">Sexo: </label>
+                <input class="form-control" type="text" id="sexo">
+                <br>
+                <div id="select"></div>
+                <br><br>
+                <button id="btnguardar" class="btn btn-primary" onclick="sp.guardar()">Guardar</button>
+                <br>
+                <br>
+                <button id="btnborrar" class="btn btn-primary" onclick="sp.borrarTodo()" style='width:100px'>Borrar Todo</button>
+                <br>
+                <br>
+                <button id="btnmodificar" class="btn btn-primary" onclick="modificar()">Modificar</button>
+                <br>
+            </div>
+            <div class="col-sm-8 text-left">
+                <div id="table"></div>
+            </div>
+            <div class="col-sm-2 sidenav">
+                <form class="" id="checkBoxes" style="text-align: left">
+                    <input class="id" type="checkbox" name="filtro" value="id" checked> ID </br>
+                    <input class="nombre" type="checkbox" name="filtro" value="nombre" checked> Nombre </br>
+                    <input class="edad" type="checkbox" name="filtro" value="edad" checked> Edad </br>
+                    <input class="sexo" type="checkbox" name="filtro" value="sexo" checked> Sexo </br>
+                    <input class="puesto" type="checkbox" name="filtro" value="puesto" checked> Puesto </br>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

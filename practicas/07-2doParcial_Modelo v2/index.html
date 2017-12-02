@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bower_components\bootstrap\dist\css\bootstrap.min.css">
+    <link rel="stylesheet" href="css\estilos.css">
+    <script src="bower_components\jquery\dist\jquery.slim.min.js"></script>
+    <script src="bower_components\bootstrap\dist\js\bootstrap.min.js"></script>
+    <script src="js\ETipo.js"></script>
+    <script src="js\APP.js"></script>
+    <script src="js\Animal.js"></script>
+    <script src="js\Mascota.js"></script>
+    <script src="js\MOCK_DATA.js"></script>
+
+    <title>modelo2doParcial</title>
+</head>
+
+
+<body style="height:1500px">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <h1>Segundo Parcial Laboratorio III
+                    <small>Daniel de Brito 3D</small>
+                </h1>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="margin-top:60px">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-xs-12 col-sm-6 col-md-2">
+                <div class="form-group">
+                    <div class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="0">
+                        <br>
+                        <label class="active" for="id">ID: </label>
+                        <input class="form-control" type="text" id="id">
+                        <br>
+                        <label for="nombre">Nombre: </label>
+                        <input class="form-control" type="text" id="nombre">
+                        <br>
+                        <label for="edad">Edad: </label>
+                        <input class="form-control" type="text" id="edad">
+                        <br>
+                        <div id="select"></div>
+                        <br>
+                        <label for="cantpatas">Cantidad de Patas: </label>
+                        <input class="form-control" type="number" id="cantpatas" max="5" min="0">
+                        <br>
+                        <div id="select"></div>
+                        <br>
+                        <button id="btnguardar" class="btn btn-primary" onclick="Guardar()">Guardar</button>
+                        <br>
+                        <br>
+                        <button id="btnborrar" class="btn btn-primary" onclick="borrar()" style='width:100px'>Borrar</button>
+                        <br>
+                        <br>
+                        <button id="btnmodificar" class="btn btn-primary" onclick="modificar()">Modificar</button>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-8">
+                <br>
+                <form class="form-control" id="checkBoxes">
+                    <input class="id" type="checkbox" name="filtro" value="id" checked> ID:
+                    <input class="nombre" type="checkbox" name="filtro" value="nombre" checked> Nombre:
+                    <input class="edad" type="checkbox" name="filtro" value="edad" checked> Edad:
+                    <input class="tipo" type="checkbox" name="filtro" value="tipo" checked> Tipo:
+                    <input class="patas" type="checkbox" name="filtro" value="patas" checked> Patas:
+                </form>
+                <div id="table"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container-fluid text-center">
+            <p>danieldebrito@outlook.com</p>
+          </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+button{
+    width:100px;
+}
+
+h1{
+    color:white
+}
+
+#main-header {
+
+	
+	width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+	left: 0; /* Posicionamos la cabecera al lado izquierdo */
+	top: 0; /* Posicionamos la cabecera pegada arriba */
+	position: fixed; /* Hacemos que la cabecera tenga una posición fija */
+}
+
+footer {
+    background-color: rgb(44, 5, 5);
+    color: white;
+    padding: 15px;
+  }
+
+  .navbar {
+    background-color: rgb(44, 5, 5);
+  }

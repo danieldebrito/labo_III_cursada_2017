@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bower_components\bootstrap\dist\css\bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="bower_components\jquery\dist\jquery.min.js"></script>
+    <script src="bower_components\bootstrap\dist\js\bootstrap.min.js"></script>
+    <script src="data.js"></script>
+    <script src="autos.js"></script>
+    <script src="function.js"></script>
+    <title>json table</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <head>
+            <div class="form-group">
+                <br>
+                <label for="nombre">Nombre: </label>
+                <input class="form-control" type="text" id="nombre">
+                <br>
+                <label for="apellido">Apellido: </label>
+                <input class="form-control" type="text" id="apellido">
+                <br>
+                <label for="color">Color Preferido: </label>
+                <input type="color" name="color" id="color">
+                <br>
+                <button id="btnguardar" class="btn btn-primary" onclick="guardar()">Guardar</button>
+
+            </div>
+        </head>
+
+
+        <div class="container">
+            <div class="row">
+                <div id="table"></div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
